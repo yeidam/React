@@ -1,9 +1,92 @@
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body{
+  background-image: url(/public/back2.png);
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.App{
+  background-color: #e8e1d7;
+  width: 600px;
+  height: 620px;
+  margin: 100px auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+  position: relative;
+}
+.App .black-nav h4{
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+.App input{
+  position: fixed;
+  left: calc(50% - 100px);
+  width: 200px;
+  border: solid 1px #67860e;
+  background-color: transparent;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.App .inner{
+  position: relative;
+  top: 80px;
+  width: 550px;
+  margin: 0 auto;
+  height: 450px;
+  overflow: auto;
+}
+.App .inner::-webkit-scrollbar{
+  width: 10px;
+}
+.App .inner::-webkit-scrollbar-thumb{
+  height: 10%;
+  background:#ed6335;
+  border-radius: 10px;
+}
+.App .inner::-webkit-scrollbar-track{
+  background: #334405;
+  border-radius: 10px;
+}
+.App .writeBtn{
+  position: fixed;
+  left: calc(58% - 30px);
+  width: 60px;
+  top: 173px;
+  border: solid 1px #67860e;
+  background-color: transparent;
+  line-height: 25px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s all ease;
+}
+.App .writeBtn:hover{
+  background-color: #67860e;
+  color: #fff;
+}
+.depth1{
+  line-height: 60px;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
 .black-nav{
   display: flex;
-  background-color: #384572;
+  background-color: #ed6335;
   width: 100%;
   color: #fff;
   padding-left: 20px;
+  border-radius: 20px 20px 0 0;
 }
 div{
   box-sizing: border-box;
@@ -11,13 +94,32 @@ div{
 .list{
   padding-left: 20px;
   text-align: left;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 480px;
+  margin: 0 auto;
 }
 .modal{
-  margin-top: 20px;
-  padding: 20px;
+  padding: 15px;
   background-color: #eee;
   text-align: left;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+.modal p{
+  color: #fff;
+}
+.deletebtn{
+  background-color: transparent;
+  margin-left: 10px;
+  border: none;
+  font-size: 15px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

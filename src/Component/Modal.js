@@ -5,7 +5,8 @@ const Modal = (props) => {
         <div>
             <div className='modal' style={{backgroundColor : props.color}}>
                 <h4>{props.name[props.title]}</h4>
-                <p>즐겁다</p>
+                <p>알찬 하루다</p>
+                <p>{props.date}</p>
             </div>
         </div>
     );
