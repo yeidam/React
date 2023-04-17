@@ -10,7 +10,7 @@ function App() {
   let [title, setTitle] = useState(0); // 현재 상태의 타이틀을 저장해줌
   let [input, setInput] = useState('');
 
-  let right = function(){
+  let write = function(){
     if(input == '' || input == undefined || input == null){
       alert('써')
     }else{
@@ -35,21 +35,21 @@ function App() {
         a.map(function(parm, i){
           return (
             <div className='list' key={i}>
-            <h4 onClick={()=>{
-              setTitle(i);
-              setModal(modal == true ? modal = false : modal = true)
-              }}>{a[i]}</h4>
-              <span onClick={()=>{
-                let copyLike = [...like];
-                copyLike[i] = copyLike[i] + 1;
-                setLike(copyLike);
-              }}>🤷‍♀️</span>{like[i]}
-              <p>글쓴이</p>
-              <button onClick={()=>{
-                let deleteBtn = [...a];
-                deleteBtn.splice(i, 1);
-                setA(deleteBtn);
-              }}>삭제</button>
+              <h4 onClick={()=>{
+                setTitle(i);
+                setModal(modal == true ? modal = false : modal = true)
+                }}>{a[i]}</h4>
+                <span onClick={()=>{
+                  let copyLike = [...like];
+                  copyLike[i] = copyLike[i] + 1;
+                  setLike(copyLike);
+                }}>🤷‍♀️</span>{like[i]}
+                <p>글쓴이</p>
+                <button onClick={()=>{
+                  let deleteBtn = [...a];
+                  deleteBtn.splice(i, 1);
+                  setA(deleteBtn);
+                }}>삭제</button>
             </div>
           ) 
         })
@@ -59,7 +59,7 @@ function App() {
         console.log(input);
       }}/>
       <button onClick={()=>{
-        right()
+        write()
       }}>글쓰기</button>
       {
         modal == true ? <Modal color='#549ed9' name={a} title={title}/> : null
