@@ -8,6 +8,23 @@ function App() {
   let [like, setLike] = useState([0,0,0]);
   let [modal, setModal] = useState(false);
   let [title, setTitle] = useState(0); // 현재 상태의 타이틀을 저장해줌
+  let [input, setInput] = useState('');
+
+  let right = function(){
+    if(input == '' || input == undefined || input == null){
+      alert('써')
+    }else{
+      let copyA = [...a];
+      copyA.unshift(input);
+      setA(copyA);
+
+      let copyLike2 = [...like];
+      copyLike2.unshift(0);
+      setLike(copyLike2);
+    }
+  }
+  
+
 
   return (
     <div className="App">
@@ -25,13 +42,25 @@ function App() {
               <span onClick={()=>{
                 let copyLike = [...like];
                 copyLike[i] = copyLike[i] + 1;
-                setLike(copyLike)
+                setLike(copyLike);
               }}>🤷‍♀️</span>{like[i]}
-              <p>4월15일 발행</p>
+              <p>글쓴이</p>
+              <button onClick={()=>{
+                let deleteBtn = [...a];
+                deleteBtn.splice(i, 1);
+                setA(deleteBtn);
+              }}>삭제</button>
             </div>
           ) 
         })
       }
+      <input type="text" onChange={(e)=>{
+        setInput(e.target.value);
+        console.log(input);
+      }}/>
+      <button onClick={()=>{
+        right()
+      }}>글쓰기</button>
       {
         modal == true ? <Modal color='#549ed9' name={a} title={title}/> : null
       }
