@@ -38,7 +38,8 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className='wrap'>
+          <div className="App">
       <div className='black-nav'>
         <h4 style={{color : "#fff"}}>TODO LIST</h4>
       </div>
@@ -83,6 +84,8 @@ function App() {
         modal == true ? <Modal color='#ed6335' name={a} title={title} date={date}/> : null
       }
     </div>
+    </div>
+
   );
 }
 

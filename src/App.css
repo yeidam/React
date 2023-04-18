@@ -6,18 +6,27 @@
 }
 
 html, body{
-  background-image: url(/public/back2.png);
+  
   font-family: 'NanumSquareNeo-Variable';
+}
+.wrap{
+  background-image: url(/public/back2.png);
+  width: 1000px;
+  margin: 0 auto;
+  height: 800px;
 }
 
 .App{
   background-color: #e8e1d7;
   width: 600px;
   height: 620px;
-  margin: 100px auto;
+  margin: 0 auto;
+  position: relative;
+  top: 50pxs;
   border-radius: 20px;
   box-shadow: 5px 5px;
   position: relative;
+  top: 50px;
 }
 .App .black-nav h4{
   text-align: center;
@@ -59,7 +68,7 @@ html, body{
   position: fixed;
   left: calc(58% - 30px);
   width: 60px;
-  top: 173px;
+  top: 124px;
   border: solid 1px #67860e;
   background-color: transparent;
   line-height: 25px;
@@ -108,7 +117,7 @@ div{
   width: 500px;
   margin: 0 auto;
   position: relative;
-  top: -50px;
+  top: -65px;
   border-radius: 30px;
   font-size: 15px;
 }
